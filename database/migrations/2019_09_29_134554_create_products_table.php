@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->decimal('sale_price');
             $table->string('product_photo')->nullable();
             $table->text('description')->nullable();
-            $table->text('weight', 50)->nullable();
+            $table->decimal('weight')->default(0);
             $table->integer('stock');
             $table->tinyInteger('featured');
             $table->enum('status', ['Publish', 'Draft', 'Inactive'])->default('Publish');
