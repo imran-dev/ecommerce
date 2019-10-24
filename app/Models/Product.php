@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
@@ -20,7 +21,7 @@ class Product extends Model implements HasMedia
         parent::boot();
 
         static::creating(function ($product) {
-            $product->slug = str_slug($product->name);
+            $product->slug = Str::slug($product->name);
         });
     }
 }

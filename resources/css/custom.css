@@ -48,3 +48,9 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
+ul.header-category-list {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}

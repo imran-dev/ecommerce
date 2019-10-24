@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.layouts.master');
+use Illuminate\Support\Facades\Route;
+
+Route::group(['namespace' => 'Frontend'], function(){
+    Route::get('/', 'HomeController@showHomePage');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
