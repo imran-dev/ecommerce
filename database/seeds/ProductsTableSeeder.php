@@ -12,5 +12,11 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         factory(App\Models\Product::class, 10)->create();
+
+        $products = \App\Models\Product::select('id')->get();
+
+        foreach ($products as $product){
+            $product->addMediaFromUrl('http://lorempixel.com/640/480/fashion/')->toMediaCollection('products');
+        }
     }
 }

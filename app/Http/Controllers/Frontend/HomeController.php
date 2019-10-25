@@ -8,9 +8,14 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function showHomePage(){
+    public function showHomePage()
+    {
         $data = [];
-        $data['products'] = Product::select(['id', 'name', 'slug', 'price', 'sale_price', 'product_photo'])->where('status', 'Publish')->paginate(9);
+        $data['products'] =
+            Product::select(['id', 'name', 'slug', 'price', 'sale_price', 'product_photo'])
+            ->where('status', 'Publish')
+            ->paginate(9);
+
         return view('frontend.home', $data);
     }
 }

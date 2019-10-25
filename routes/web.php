@@ -13,6 +13,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['namespace' => 'Frontend'], function(){
+Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'HomeController@showHomePage');
 });
