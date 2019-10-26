@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         $data = [];
         $data['products'] =
-            Product::select(['id', 'name', 'slug', 'price', 'sale_price', 'product_photo'])
+            Product::select(['id', 'name', 'slug', 'price', 'sale_price'])
             ->where('status', 'Publish')
             ->paginate(9);
 
