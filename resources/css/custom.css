@@ -54,3 +54,128 @@ ul.header-category-list {
     -moz-column-count: 3;
     column-count: 3;
 }
+
+
+@media screen and (max-width: 996px) {
+    .product-details  .preview {
+        margin-bottom: 20px;
+    }
+}
+
+.product-details  .preview-pic {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.product-details  .preview-thumbnail.nav-tabs {
+    border: none;
+    margin-top: 15px;
+}
+
+.product-details  .preview-thumbnail.nav-tabs li {
+    width: 18%;
+    margin-right: 2.5%;
+}
+
+.product-details  .preview-thumbnail.nav-tabs li img {
+    max-width: 100%;
+    display: block;
+}
+
+.product-details  .preview-thumbnail.nav-tabs li a {
+    padding: 0;
+    margin: 0;
+}
+
+.product-details  .preview-thumbnail.nav-tabs li:last-of-type {
+    margin-right: 0;
+}
+
+.product-details  .preview-pic img {
+    width: 100%;
+    -webkit-animation-name: opacity;
+    animation-name: opacity;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+
+.product-details .card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 3em;
+    line-height: 1.5em;
+}
+
+.product-details .details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.product-details .product-title, .price {
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+
+.product-details .checked, .price span {
+    color: #ff9f1a;
+}
+
+.product-details .product-title, .product-description, .price {
+    margin-bottom: 15px;
+}
+
+.product-details .product-title {
+    margin-top: 0;
+}
+
+.product-details .add-to-cart {
+    background: #ff9f1a;
+    padding: 1.2em 1.5em;
+    border: none;
+    text-transform: UPPERCASE;
+    font-weight: bold;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
+}
+
+.product-details  .add-to-cart:hover {
+    background: #b36800;
+    color: #fff;
+}
+
+.product-details  .not-available {
+    text-align: center;
+    line-height: 2em;
+}
+
+.product-details  .not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff;
+}
+
+.product-details  .orange {
+    background: #ff9f1a;
+}
+
+.product-details  .green {
+    background: #85ad00;
+}
+
+.product-details  .blue {
+    background: #0076ad;
+}
+
+.product-details  .tooltip-inner {
+    padding: 1.3em;
+}

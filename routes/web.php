@@ -14,5 +14,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Frontend'], function () {
-    Route::get('/', 'HomeController@showHomePage');
+    Route::get('/', 'HomeController@showHomePage')->name('frontend.home');
+    Route::get('/product/{slug}', 'ProductController@detailsPage')->name('product.details');
 });
