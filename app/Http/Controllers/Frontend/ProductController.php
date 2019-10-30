@@ -14,8 +14,9 @@ class ProductController extends Controller
 
         $data['product'] = Product::where('slug', $slug)->where('status', 'Publish')->first();
 
-        if($data['product'] == null){
-            redirect()->route('frontend.home');
+        if($data['product'] === null){
+//            return redirect()->route('frontend.home');
+            return view('frontend.404');
         }
 
         return view('frontend.product.details', $data);
